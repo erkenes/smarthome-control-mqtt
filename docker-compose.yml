@@ -1,0 +1,20 @@
+version: '3.5'
+
+services:
+  mqtt:
+    image: eclipse-mosquitto:2.0
+    restart: unless-stopped
+    volumes:
+      - ${ROOT_PATH}/Data/conf:/mosquitto/config
+      - ${ROOT_PATH}/Data/data:/mosquitto/data
+      - ${ROOT_PATH}/Data/log:/mosquitto/log
+    ports:
+      - "${MQTT_PORT}:1883"
+      - "${MQTT_TLS_PORT}:9001"
+    environment:
+      TZ: ${TIMEZONE}
+
+networks:
+  smart-home-control:
+    external: true
+    name: "smart-home-control"

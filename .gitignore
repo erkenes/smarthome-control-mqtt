@@ -1,0 +1,4 @@
+.idea/
+
+Data/data/*.db
+Data/log/*.log
