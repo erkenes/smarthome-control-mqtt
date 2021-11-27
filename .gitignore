@@ -2,3 +2,5 @@
 
 Data/data/*.db
 Data/log/*.log
+Data/conf/certs/*.crt
+Data/conf/certs/*.key
