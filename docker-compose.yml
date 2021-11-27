@@ -10,7 +10,7 @@ services:
       - ${ROOT_PATH}/Data/log:/mosquitto/log
     ports:
       - "${MQTT_PORT}:1883"
-      - "${MQTT_TLS_PORT}:9001"
+      - "${MQTT_TLS_PORT}:8883"
     environment:
       TZ: ${TIMEZONE}
     networks:
