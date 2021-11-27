@@ -13,6 +13,8 @@ services:
       - "${MQTT_TLS_PORT}:9001"
     environment:
       TZ: ${TIMEZONE}
+    networks:
+      - "smart-home-control"
 
 networks:
   smart-home-control:
